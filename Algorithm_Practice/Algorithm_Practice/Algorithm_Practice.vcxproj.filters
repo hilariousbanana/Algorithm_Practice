@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Algorithm_Practice.cpp">
+    <ClCompile Include="TwoSum.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="TwoSum.cpp">
+    <ClCompile Include="AddTwoNumbers.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
