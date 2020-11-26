@@ -13,13 +13,25 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Practices">
+      <UniqueIdentifier>{a52b1bd3-d34a-4869-837c-f8af9231e20d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TwoSum.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="1.TwoSum.cpp">
+      <Filter>소스 파일\Practices</Filter>
     </ClCompile>
-    <ClCompile Include="AddTwoNumbers.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="2.AddTwoNumbers.cpp">
+      <Filter>소스 파일\Practices</Filter>
+    </ClCompile>
+    <ClCompile Include="5.Longest Palindromic Substring.cpp">
+      <Filter>소스 파일\Practices</Filter>
+    </ClCompile>
+    <ClCompile Include="6.Zigzag Conversion.cpp">
+      <Filter>소스 파일\Practices</Filter>
+    </ClCompile>
+    <ClCompile Include="3.Longest Substring Without Repeating Characters.cpp">
+      <Filter>소스 파일\Practices</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
