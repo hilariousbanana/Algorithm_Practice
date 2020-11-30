@@ -2,73 +2,110 @@
 #include <vector>
 using namespace std;
 
-class Solution
+class SubrectangleQueries
 {
 public:
-    vector<int> AscendingOrder(vector<int>& list)
+    vector<vector<int>> rect, subrect;
+    bool isUpdated = false;
+    SubrectangleQueries(vector<vector<int>>& rectangle)
     {
-        for (int i = 0; i < list.size() - 1; i++)
+        rect = rectangle;
+        subrect = rect;
+    }
+
+    void updateSubrectangle(int row1, int col1, int row2, int col2, int newValue)
+    {
+        isUpdated = true;
+        int R1, R2, C1, C2 = 0;
+
+        //if (row1 > row2)
+        //{
+        //    R1 = row2;
+        //    R2 = row1;
+        //    C1 = col2;
+        //    C2 = col1;
+        //}
+        //else if (row1 == row2 && col1 > col2)
+        //{
+        //    R1 = row2;
+        //    R2 = row1;
+        //    C1 = col2;
+        //    C2 = col1;
+        //}
+        //else
+        //{
+        //    R1 = row1;
+        //    R2 = row2;
+        //    C1 = col1;
+        //    C2 = col2;
+        //}
+
+        R1 = row1;
+        R2 = row2;
+        C1 = col1;
+        C2 = col2;
+
+        for (int i = R1; i <= R2; i++)
         {
-            for (int j = i + 1; j <= list.size() -1; j++)
+            if (R1 == R2)
             {
-                if (list[i] > list[j])
+                for (int j = C1; j <= C2; j++)
                 {
-                    int temp = 0;
-                    temp = list[i];
-                    list[i] = list[j];
-                    list[j] = temp;
+                    subrect[i][j] = newValue;
                 }
             }
-        }
-        return list;
-    }
-
-    int MaxNumber(vector<int>& list)
-    {
-        int max = 0;
-
-        for (int i = 0; i < list.size(); i++)
-        {
-            if (list[i] > max)
+            else
             {
-                max = list[i];
+                if (i == R1)
+                {
+                    for (int j = C1; j < subrect[i].size(); j++)
+                    {
+                        subrect[i][j] = newValue;
+                    }
+                }
+                else if (R1 < i < R2)
+                {
+                    for (int j = 0; j < subrect[i].size(); j++)
+                    {
+                        subrect[i][j] = newValue;
+                    }
+                }
+                else
+                {
+                    for (int j = 0; j <= C2; j++)
+                    {
+                        subrect[i][j] = newValue;
+                    }
+                }
             }
-        }
 
-        return max;
+        }
     }
 
-    int maxWidthOfVerticalArea(vector<vector<int>>& points)
+    int getValue(int row, int col)
     {
-        vector<int> xlist(points.size());
-        vector<int> differences;
-
-        for (int i = 0; i < points.size(); i++)
+        if (isUpdated)
         {
-            xlist[i] = points[i][0];
+            return subrect[row][col];
         }
-
-        xlist = AscendingOrder(xlist);
-
-        for (int i = 0; i < xlist.size() - 1; i++)
+        else
         {
-            int temp = xlist[i + 1] - xlist[i];
-            differences.push_back(temp);
+            return rect[row][col];
         }
-
-        return MaxNumber(differences);
     }
 };
 
 int main()
 {
-    vector<int> temp = {1, 3, 2, 7, 0};
-    Solution sol;
-
-    temp = sol.AscendingOrder(temp);
+    vector<vector<int>> temp = { {0, 1, 2}, {2, 3, 4}, {3, 4, 5} };
+    SubrectangleQueries* obj = new SubrectangleQueries(temp);
+    obj->updateSubrectangle(1, 2, 2, 2, 4);
 
     for (int i = 0; i < temp.size(); i++)
     {
-        cout << temp[i] << endl;
+        for (int j = 0; j < temp[i].size(); j++)
+        {
+            cout << temp[i][j] << endl;
+        }
     }
 }
