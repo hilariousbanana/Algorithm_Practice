@@ -145,6 +145,7 @@
     <ClCompile Include="1480.Running Sum of 1d Array.cpp" />
     <ClCompile Include="1512.Number of Good Pairs.cpp" />
     <ClCompile Include="1603.Design Parking System.cpp" />
+    <ClCompile Include="1637. Widest Vertical Area Between Two Points Containing No Points.cpp" />
     <ClCompile Include="1662.Check If Two String Arrays are Equivalent.cpp" />
     <ClCompile Include="2.AddTwoNumbers.cpp" />
     <ClCompile Include="1.TwoSum.cpp" />
