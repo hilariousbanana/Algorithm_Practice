@@ -54,5 +54,8 @@
     <ClCompile Include="1389.Create Target Array in the Given Order.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1603.Design Parking System.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
