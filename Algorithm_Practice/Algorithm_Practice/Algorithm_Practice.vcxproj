@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1389.Create Target Array in the Given Order.cpp" />
+    <ClCompile Include="1409. Queries on a Permutation With Key.cpp" />
     <ClCompile Include="1431.Kids With the Greatest Number of Candies.cpp" />
     <ClCompile Include="1470.Shuffle the Array.cpp" />
     <ClCompile Include="1476. Subrectangle Queries.cpp" />
