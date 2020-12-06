@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="1221. Split a String in Balanced Strings.cpp" />
+    <ClCompile Include="1290. Convert Binary Number in a Linked List to Integer.cpp" />
     <ClCompile Include="1389.Create Target Array in the Given Order.cpp" />
     <ClCompile Include="1409. Queries on a Permutation With Key.cpp" />
     <ClCompile Include="1431.Kids With the Greatest Number of Candies.cpp" />
@@ -148,6 +150,7 @@
     <ClCompile Include="1512.Number of Good Pairs.cpp" />
     <ClCompile Include="1603.Design Parking System.cpp" />
     <ClCompile Include="1637. Widest Vertical Area Between Two Points Containing No Points.cpp" />
+    <ClCompile Include="1662. Check If Two String Arrays are Equivalent.cpp" />
     <ClCompile Include="1662.Check If Two String Arrays are Equivalent.cpp" />
     <ClCompile Include="2.AddTwoNumbers.cpp" />
     <ClCompile Include="1.TwoSum.cpp" />
@@ -155,6 +158,7 @@
     <ClCompile Include="5.Longest Palindromic Substring.cpp" />
     <ClCompile Include="6.Zigzag Conversion.cpp" />
     <ClCompile Include="771.Jewels and Stones.cpp" />
+    <ClCompile Include="938. Range Sum of BST.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

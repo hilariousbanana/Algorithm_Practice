@@ -66,5 +66,17 @@
     <ClCompile Include="1409. Queries on a Permutation With Key.cpp">
       <Filter>소스 파일\Practices</Filter>
     </ClCompile>
+    <ClCompile Include="1662. Check If Two String Arrays are Equivalent.cpp">
+      <Filter>소스 파일\Practices</Filter>
+    </ClCompile>
+    <ClCompile Include="1290. Convert Binary Number in a Linked List to Integer.cpp">
+      <Filter>소스 파일\Practices</Filter>
+    </ClCompile>
+    <ClCompile Include="938. Range Sum of BST.cpp">
+      <Filter>소스 파일\Practices</Filter>
+    </ClCompile>
+    <ClCompile Include="1221. Split a String in Balanced Strings.cpp">
+      <Filter>소스 파일\Practices</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
