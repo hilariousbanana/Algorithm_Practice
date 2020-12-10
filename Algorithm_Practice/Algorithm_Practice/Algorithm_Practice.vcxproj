@@ -151,6 +151,7 @@
     <ClCompile Include="1551. Minimum Operations to Make Array Equal.cpp" />
     <ClCompile Include="1588. Sum of All Odd Length Subarrays.cpp" />
     <ClCompile Include="1603.Design Parking System.cpp" />
+    <ClCompile Include="1630. Arithmetic Subarrays.cpp" />
     <ClCompile Include="1637. Widest Vertical Area Between Two Points Containing No Points.cpp" />
     <ClCompile Include="1662. Check If Two String Arrays are Equivalent.cpp" />
     <ClCompile Include="1662.Check If Two String Arrays are Equivalent.cpp" />
