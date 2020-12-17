@@ -1,66 +1,45 @@
 ﻿#include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 class Solution
 {
 public:
-    int MaxNumber(vector<int>& list)
-    {
-        int max = 0;
+	int countGoodTriplets(vector<int>& arr, int a, int b, int c)
+	{
+		int result = 0;
+		int left = 0, mid = 1, right = 2; //index
 
-        for (int i = 0; i < list.size(); i++)
-        {
-            if (list[i] > max)
-            {
-                max = list[i];
-            }
-        }
-        return max;
-    }
+		for (int i = left; i < arr.size() - 2; i++)
+		{
+			for (int j = mid; j < arr.size() - 1; j++)
+			{
+				if (abs(arr[i] - arr[j]) <= a)
+				{
+					for (int k = right; k < arr.size(); k++)
+					{
+						if (abs(arr[j] - arr[k]) <= b && abs(arr[i] - arr[k]) <= c)
+						{
+							result++;
+							cout << arr[i] << arr[j] << arr[k] << endl;
+						}
+					}
+				}
+				right++;
+			}
+			mid++;
+		}
 
-    int maxIncreaseKeepingSkyline(vector<vector<int>>& grid)
-    {
-        int result = 0;
-        vector<int> sideline, frontline;
-        vector<vector<int>> temp(grid.size(), vector<int>(grid[0].size()));
+		return result;
+	}
 
-        for (int i = 0; i < temp.size(); i++)
-        {
-            for (int j = 0; j < temp.size(); j++)
-            {
-                temp[i].push_back(grid[j][i]);
-            }
-        }
-
-        for (int i = 0; i < grid.size(); i++)
-        {
-            sideline.push_back(MaxNumber(grid[i]));
-            frontline.push_back(MaxNumber(temp[i]));
-        }
-
-        for (int i = 0; i < grid.size(); i++)
-        {
-            for (int j = 0; j < grid.size(); j++)
-            {
-                if (sideline[i] > frontline[i])
-                {
-                    result += frontline[i] - grid[i][j];
-                }
-                else
-                {
-                    result += sideline[i] - grid[i][j];
-                }
-            }
-        }
-        return result;
-    }
 };
 
 int main()
 {
-    vector<vector<int>> temp = { { 0, 1, 2}, { 1, 2, 3 }, { 4, 4, 4 } };
-    Solution sol;
+	vector<int> temp = { 1, 1, 2, 2, 3 };
+	Solution sol;
 
-    cout << sol.maxIncreaseKeepingSkyline(temp) << endl;
+	sol.countGoodTriplets(temp, 0, 0, 1);
 }

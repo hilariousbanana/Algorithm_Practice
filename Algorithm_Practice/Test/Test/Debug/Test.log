@@ -1,8 +1,5 @@
 ﻿  Test.cpp
-C:\Users\user\Desktop\Algorithm_Practice\Algorithm_Practice\Test\Test\Test.cpp(12,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\user\Desktop\Algorithm_Practice\Algorithm_Practice\Test\Test\Test.cpp(28,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\user\Desktop\Algorithm_Practice\Algorithm_Practice\Test\Test\Test.cpp(30,31): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\user\Desktop\Algorithm_Practice\Algorithm_Practice\Test\Test\Test.cpp(36,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\user\Desktop\Algorithm_Practice\Algorithm_Practice\Test\Test\Test.cpp(42,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\user\Desktop\Algorithm_Practice\Algorithm_Practice\Test\Test\Test.cpp(44,31): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  Test.vcxproj -> C:\Users\user\Desktop\Algorithm_Practice\Algorithm_Practice\Test\Debug\Test.exe
+C:\Users\teemo\Desktop\Algorithm_Practice\Algorithm_Practice\Test\Test\Test.cpp(14,24): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\teemo\Desktop\Algorithm_Practice\Algorithm_Practice\Test\Test\Test.cpp(16,24): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\teemo\Desktop\Algorithm_Practice\Algorithm_Practice\Test\Test\Test.cpp(20,28): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Test.vcxproj -> C:\Users\teemo\Desktop\Algorithm_Practice\Algorithm_Practice\Test\Debug\Test.exe
