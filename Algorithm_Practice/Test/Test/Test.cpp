@@ -2,110 +2,65 @@
 #include <vector>
 using namespace std;
 
-class SubrectangleQueries
+class Solution
 {
 public:
-    vector<vector<int>> rect, subrect;
-    bool isUpdated = false;
-    SubrectangleQueries(vector<vector<int>>& rectangle)
+    int MaxNumber(vector<int>& list)
     {
-        rect = rectangle;
-        subrect = rect;
+        int max = 0;
+
+        for (int i = 0; i < list.size(); i++)
+        {
+            if (list[i] > max)
+            {
+                max = list[i];
+            }
+        }
+        return max;
     }
 
-    void updateSubrectangle(int row1, int col1, int row2, int col2, int newValue)
+    int maxIncreaseKeepingSkyline(vector<vector<int>>& grid)
     {
-        isUpdated = true;
-        int R1, R2, C1, C2 = 0;
+        int result = 0;
+        vector<int> sideline, frontline;
+        vector<vector<int>> temp(grid.size(), vector<int>(grid[0].size()));
 
-        //if (row1 > row2)
-        //{
-        //    R1 = row2;
-        //    R2 = row1;
-        //    C1 = col2;
-        //    C2 = col1;
-        //}
-        //else if (row1 == row2 && col1 > col2)
-        //{
-        //    R1 = row2;
-        //    R2 = row1;
-        //    C1 = col2;
-        //    C2 = col1;
-        //}
-        //else
-        //{
-        //    R1 = row1;
-        //    R2 = row2;
-        //    C1 = col1;
-        //    C2 = col2;
-        //}
-
-        R1 = row1;
-        R2 = row2;
-        C1 = col1;
-        C2 = col2;
-
-        for (int i = R1; i <= R2; i++)
+        for (int i = 0; i < temp.size(); i++)
         {
-            if (R1 == R2)
+            for (int j = 0; j < temp.size(); j++)
             {
-                for (int j = C1; j <= C2; j++)
-                {
-                    subrect[i][j] = newValue;
-                }
+                temp[i].push_back(grid[j][i]);
             }
-            else
+        }
+
+        for (int i = 0; i < grid.size(); i++)
+        {
+            sideline.push_back(MaxNumber(grid[i]));
+            frontline.push_back(MaxNumber(temp[i]));
+        }
+
+        for (int i = 0; i < grid.size(); i++)
+        {
+            for (int j = 0; j < grid.size(); j++)
             {
-                if (i == R1)
+                if (sideline[i] > frontline[i])
                 {
-                    for (int j = C1; j < subrect[i].size(); j++)
-                    {
-                        subrect[i][j] = newValue;
-                    }
-                }
-                else if (R1 < i < R2)
-                {
-                    for (int j = 0; j < subrect[i].size(); j++)
-                    {
-                        subrect[i][j] = newValue;
-                    }
+                    result += frontline[i] - grid[i][j];
                 }
                 else
                 {
-                    for (int j = 0; j <= C2; j++)
-                    {
-                        subrect[i][j] = newValue;
-                    }
+                    result += sideline[i] - grid[i][j];
                 }
             }
-
         }
-    }
-
-    int getValue(int row, int col)
-    {
-        if (isUpdated)
-        {
-            return subrect[row][col];
-        }
-        else
-        {
-            return rect[row][col];
-        }
+        return result;
     }
 };
 
 int main()
 {
-    vector<vector<int>> temp = { {0, 1, 2}, {2, 3, 4}, {3, 4, 5} };
-    SubrectangleQueries* obj = new SubrectangleQueries(temp);
-    obj->updateSubrectangle(1, 2, 2, 2, 4);
+    vector<vector<int>> temp = { { 0, 1, 2}, { 1, 2, 3 }, { 4, 4, 4 } };
+    Solution sol;
 
-    for (int i = 0; i < temp.size(); i++)
-    {
-        for (int j = 0; j < temp[i].size(); j++)
-        {
-            cout << temp[i][j] << endl;
-        }
-    }
+    cout << sol.maxIncreaseKeepingSkyline(temp) << endl;
 }
